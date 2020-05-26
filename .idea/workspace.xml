@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8be5120d-66fa-49b5-90fa-8071eedad917" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="usePluginRegistry" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cNDxlDi47lIpT5VgbdczlDIoTH" />
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Karim\IdeaProjects\SFGSolver\src\main\resources" />
+      <recent name="C:\Users\Karim\IdeaProjects\SFGSolver\src\main\resources\org\openjfx" />
+      <recent name="C:\Users\Karim\IdeaProjects\SFGSolver\src\main\java\org\openjfx" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Karim\IdeaProjects\SFGSolver\src\main\resources" />
+      <recent name="C:\Users\Karim\IdeaProjects\SFGSolver\src\main\resources\org\openjfx" />
+      <recent name="C:\Users\Karim\IdeaProjects\SFGSolver\src" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install:install-file –Dfile=C:\Users\Karim\IdeaProjects\SFGSolver\JavaFXSmartGraph-master.jar -DgroupId=org.openjfx -DartifactId=JavaFXSmartGraph-master -Dversion=1.0" />
+      <command value="mvn install:install-file –Dfile=C:\Users\Karim\IdeaProjects\SFGSolver\JavaFXSmartGraph-master.jar" />
+      <command value="mvn javafx:compile" />
+      <command value="mvn javafx:run" />
+      <command value="mvn clean javafx:jlink -e" />
+      <command value="mvn clean javafx:jlink" />
+      <command value="mvn javafx:jlink -x" />
+      <command value="mvn  clean install" />
+      <command value="mvn install:install-file –Dfile=${pom.basedir}/JavaFXSmartGraph-master.jar -DgroupId=org.openjfx -DartifactId=JavaFXSmartGraph -Dversion=1.0" />
+      <command value="mvn install:install-file –Dfile=C:\Users\Karim\IdeaProjects\SFGSolver\JavaFXSmartGraph-master.jar -DgroupId=org.openjfx -DartifactId=JavaFXSmartGraph -Dversion=1.0 " />
+      <command value="mvn deploy:deploy-file -DgroupId=org.openjfx -DartifactId=JavaFXSmartGraph-master -Dversion=1.0 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=C:\Users\Karim\IdeaProjects\SFGSolver\JavaFXSmartGraph-master.jar" />
+      <command value="mvn package" />
+      <command value="mvn install:install-file   -Dfile=C:\Users\Karim\IdeaProjects\SignalFlowGraph\JavaFXSmartGraph-master.jar   -DgroupId=org.openjfx   -DartifactId=JavaFXSmartGraph-master   -Dversion=1.0   -Dpackaging=jar   -DgeneratePom=true" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.main">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.openjfx.App" />
+      <module name="SFGSolver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.openjfx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.openjfx.main" />
+      <module name="SFGSolver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.openjfx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SFGSolver [javafx:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+        <item itemvalue="Maven.SFGSolver [javafx:run]" />
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8be5120d-66fa-49b5-90fa-8071eedad917" name="Default Changelist" comment="" />
+      <created>1590360405905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590360405905</updated>
+    </task>
+    <servers />
+  </component>
+</project>
