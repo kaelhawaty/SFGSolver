@@ -41,16 +41,28 @@ class Edge{
 
 public class myGraph {
     private int nodes;
+    private int start;
+    private int end;
     private ArrayList<List<Edge>> adj;
     Set<Edge> st;
-    myGraph(int n){
+    myGraph(int n, int start, int end){
         nodes = n;
+        this.start = start;
+        this.end = end;
         st = new HashSet<>();
         adj = new ArrayList<>();
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n+1; i++){
             adj.add(i, new ArrayList<>());
         }
     }
+    public int getStart() {
+        return start;
+    }
+
+    public int getEnd() {
+        return end;
+    }
+
     int getNumberOfNodes(){
         return nodes;
     }
@@ -60,6 +72,12 @@ public class myGraph {
         }
         if(st.contains(e)){
             throw new RuntimeErrorException(new Error("Edge has been inserted before, Duplicate Edge!"));
+        }
+        if(e.getTo() == start ){
+            throw new RuntimeErrorException(new Error("Adding Edge pointing to Input Node"));
+        }
+        if(e.getFrom() == end ){
+            throw new RuntimeErrorException(new Error("Adding Edge pointing from Output Node"));
         }
         adj.get(e.getFrom()).add(e);
         st.add(e);
@@ -71,7 +89,7 @@ public class myGraph {
         return adj.get(node);
     }
     boolean checkInRange(int x){
-        if(x < 0 || x >= nodes){
+        if(x < 1 || x > nodes){
             return false;
         }
         return true;

@@ -12,10 +12,10 @@ public class GraphViewer {
     private boolean flag = false;
     void drawGraph(myGraph graph, AnchorPane frame){
         Digraph<String, String> g = new DigraphEdgeList<>();
-        for(int i = 0; i < graph.getNumberOfNodes(); i++){
+        for(int i = 1; i <= graph.getNumberOfNodes(); i++){
             g.insertVertex(String.valueOf(i));
         }
-        for(int i = 0; i < graph.getNumberOfNodes(); i++){
+        for(int i = 1; i <= graph.getNumberOfNodes(); i++){
             List<Edge> edges = graph.getAdj(i);
             for(Edge e: edges){
                 g.insertEdge(String.valueOf(i), String.valueOf(e.getTo()), String.valueOf(e.getWeight()));
@@ -26,7 +26,7 @@ public class GraphViewer {
         graphView.setLayoutX(20);
         graphView.setLayoutY(70);
         graphView.setPrefWidth(550);
-        graphView.setPrefHeight(400);
+        graphView.setPrefHeight(430);
         graphView.setAutomaticLayout(true);
         if(!flag) {
             frame.getChildren().add(graphView);

@@ -8,18 +8,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="561.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.Controller">
+<AnchorPane prefHeight="561.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.Controller">
    <children>
-      <TextField fx:id="To" layoutX="179.0" layoutY="35.0" prefHeight="25.0" prefWidth="69.0" />
-      <TextField fx:id="From" layoutX="98.0" layoutY="35.0" prefHeight="25.0" prefWidth="69.0" />
+      <TextField fx:id="To" disable="true" layoutX="179.0" layoutY="35.0" prefHeight="25.0" prefWidth="69.0" />
+      <TextField fx:id="From" disable="true" layoutX="98.0" layoutY="35.0" prefHeight="25.0" prefWidth="69.0" />
       <Label layoutX="23.0" layoutY="39.0" prefHeight="17.0" prefWidth="62.0" text="Add Edge:" />
       <Label layoutX="119.0" layoutY="18.0" text="From" />
       <Label layoutX="207.0" layoutY="18.0" text="To" />
       <Label layoutX="271.0" layoutY="18.0" text="Weight" />
-      <TextField fx:id="Nodes" layoutX="455.0" layoutY="35.0" onAction="#setNodes" prefHeight="25.0" prefWidth="62.0" />
-      <TextField fx:id="Weight" layoutX="254.0" layoutY="35.0" prefHeight="25.0" prefWidth="69.0" />
+      <TextField fx:id="Nodes" layoutX="455.0" layoutY="35.0" prefHeight="25.0" prefWidth="62.0" />
+      <TextField fx:id="Weight" disable="true" layoutX="254.0" layoutY="35.0" prefHeight="25.0" prefWidth="69.0" />
       <Label layoutX="416.0" layoutY="39.0" prefHeight="17.0" prefWidth="39.0" text="Nodes" />
-      <Button fx:id="Add_Edge" layoutX="335.0" layoutY="35.0" mnemonicParsing="false" onAction="#addEdge" prefHeight="17.0" prefWidth="68.0" text="Add Edge" />
+      <Button fx:id="Add_Edge" disable="true" layoutX="335.0" layoutY="35.0" mnemonicParsing="false" onAction="#addEdge" prefHeight="17.0" prefWidth="68.0" text="Add Edge" />
       <Label layoutX="613.0" layoutY="71.0" prefHeight="17.0" prefWidth="119.0" text="Foward Paths" textAlignment="CENTER">
          <font>
             <Font size="15.0" />
@@ -27,7 +27,7 @@
       </Label>
       <TableView fx:id="Forward_Paths" layoutX="572.0" layoutY="92.0" prefHeight="173.0" prefWidth="181.0">
         <columns>
-          <TableColumn prefWidth="36.0" text="#" />
+          <TableColumn editable="false" prefWidth="36.0" sortable="false" text="ID" />
           <TableColumn editable="false" prefWidth="144.0" sortable="false" text="Path" />
         </columns>
       </TableView>
@@ -38,17 +38,50 @@
       </Label>
       <TableView fx:id="Loops" layoutX="572.0" layoutY="298.0" prefHeight="200.0" prefWidth="181.0">
         <columns>
-          <TableColumn prefWidth="35.0" text="#" />
-          <TableColumn prefWidth="145.0" text="Path" />
+          <TableColumn editable="false" prefWidth="35.0" sortable="false" text="ID" />
+          <TableColumn editable="false" prefWidth="145.0" sortable="false" text="Path" />
         </columns>
       </TableView>
-      <Button fx:id="Solve" layoutX="528.0" layoutY="35.0" mnemonicParsing="false" onAction="#Solve" text="Solve" />
-      <Button layoutX="594.0" layoutY="35.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
-      <Label layoutX="537.0" layoutY="515.0" text="Transfer Function">
+      <Button fx:id="Solve" disable="true" layoutX="865.0" layoutY="35.0" mnemonicParsing="false" onAction="#Solve" text="Solve" />
+      <Button fx:id="Reset" disable="true" layoutX="922.0" layoutY="35.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+      <Label layoutX="739.0" layoutY="515.0" text="Transfer Function">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="Transfer_Answer" editable="false" layoutX="663.0" layoutY="513.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="Transfer_Answer" editable="false" layoutX="864.0" layoutY="513.0" prefHeight="25.0" prefWidth="115.0" />
+      <TableView fx:id="Non_Touching_Loops" layoutX="773.0" layoutY="298.0" prefHeight="200.0" prefWidth="181.0">
+        <columns>
+          <TableColumn editable="false" prefWidth="37.0" sortable="false" text="ID" />
+          <TableColumn editable="false" prefWidth="143.0" sortable="false" text="Combination" />
+        </columns>
+      </TableView>
+      <Label layoutX="796.0" layoutY="277.0" prefHeight="21.0" prefWidth="136.0" text="Non touching loops" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="822.0" layoutY="71.0" prefHeight="21.0" prefWidth="86.0" text="Delta Values" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="Delta_Values" layoutX="774.0" layoutY="92.0" prefHeight="173.0" prefWidth="181.0">
+        <columns>
+          <TableColumn editable="false" prefWidth="34.0" sortable="false" text="ID" />
+          <TableColumn editable="false" prefWidth="146.0" sortable="false" text="Delta Value" />
+        </columns>
+      </TableView>
+      <Label layoutX="516.0" layoutY="515.0" text="Overall Delta">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Overall_Delta" editable="false" layoutX="615.0" layoutY="513.0" prefHeight="25.0" prefWidth="115.0" />
+      <Label layoutX="526.0" layoutY="39.0" prefHeight="17.0" prefWidth="62.0" text="Input Node" />
+      <Label layoutX="663.0" layoutY="39.0" prefHeight="17.0" prefWidth="75.0" text="Output Node" />
+      <TextField fx:id="Input_Node" layoutX="594.0" layoutY="35.0" prefHeight="25.0" prefWidth="62.0" />
+      <TextField fx:id="Output_Node" layoutX="738.0" layoutY="35.0" prefHeight="25.0" prefWidth="62.0" />
+      <Button fx:id="Set" layoutX="809.0" layoutY="35.0" mnemonicParsing="false" onAction="#Set_Graph" prefHeight="25.0" prefWidth="45.0" text="Set" />
    </children>
 </AnchorPane>

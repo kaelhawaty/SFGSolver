@@ -2,6 +2,7 @@ org\openjfx\SuperMain.class
 org\openjfx\Solver.class
 org\openjfx\Entry.class
 org\openjfx\ThreadNotify.class
+org\openjfx\Combination.class
 module-info.class
 org\openjfx\Edge.class
 org\openjfx\myGraph.class

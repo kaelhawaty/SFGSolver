@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8be5120d-66fa-49b5-90fa-8071eedad917" name="Default Changelist" comment="" />
+    <list default="true" id="8be5120d-66fa-49b5-90fa-8071eedad917" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Entry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/GraphViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/GraphViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Solver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/myGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/myGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/openjfx/GUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/openjfx/GUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SFGSolver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SFGSolver-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/Entry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/GUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/GUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/GraphViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/GraphViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/Path.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/Path.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/Solver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/myGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/myGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-SFGSolver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-SFGSolver-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +36,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -28,12 +53,14 @@
     </option>
   </component>
   <component name="ProjectId" id="1cNDxlDi47lIpT5VgbdczlDIoTH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Circus-Of-Plates" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -152,5 +179,18 @@
       <updated>1590360405905</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,17 +1,20 @@
 package org.openjfx;
 
-public class Entry{
-    private int id;
-    private String path;
-    Entry(int id, String path){
-        this.id = id;
-        this.path = path;
+public class Entry<T,V>{
+    private T first;
+    private V second;
+
+    public T getFirst() {
+        return first;
     }
-    public Integer getId() {
-        return id;
+
+    public V getSecond() {
+        return second;
     }
-    public String getPath() {
-        return path;
+
+    Entry(T first, V second){
+        this.first = first;
+        this.second = second;
     }
 
 }

@@ -29,6 +29,22 @@ class Pair<T, V>{
     }
 
 }
+class Combination<T, V>{
+    Pair<T,V> pair;
+    String s;
+    Combination(T first, V second, String s){
+        pair = new Pair<>(first, second);
+        this.s = s;
+    }
+
+    public Pair<T, V> getPair() {
+        return pair;
+    }
+
+    public String getCombination() {
+        return s;
+    }
+}
 
 class Path{
     StringBuilder s = new StringBuilder();
@@ -72,33 +88,39 @@ class Path{
 
 public class Solver {
     private myGraph myGraph;
+    private int start, end;
     private ArrayList<Path> forwardPaths = new ArrayList<>();
     private Map<Integer, Path> loops = new HashMap<>();
-    private Map<Integer,ArrayList<Pair<Integer, Double>>> combinations = new HashMap<>();
+
+    private Map<Integer,ArrayList<Combination<Integer, Double>>> combinations = new HashMap<>();
     Solver(myGraph myGraph){
         this.myGraph = myGraph;
+        this.start = myGraph.getStart();
+        this.end = myGraph.getEnd();
     }
 
-    void generateNonTouchingLoops(int index, int count, int mask, double gain, Object[] loops){
+    void generateNonTouchingLoops(StringBuilder sb, int index, int count, int mask, double gain, Object[] loops){
         if(index == loops.length){
             if(count != 0) {
-                ArrayList<Pair<Integer, Double>> arr = combinations.getOrDefault(count, new ArrayList<>());
-                arr.add(new Pair(mask, gain));
+                ArrayList<Combination<Integer, Double>> arr = combinations.getOrDefault(count, new ArrayList<>());
+                arr.add(new Combination<>(mask, gain, sb.toString()));
                 combinations.put(count, arr);
             }
             return;
         }
         Path p = (Path) loops[index];
         if((p.getMask() & mask) == 0) {
-            generateNonTouchingLoops(index+1, count + 1, p.getMask() | mask, p.getGain() * gain, loops);
+            sb.append(" L" + index);
+            generateNonTouchingLoops(sb, index+1, count + 1, p.getMask() | mask, p.getGain() * gain, loops);
+            sb.setLength(sb.length()-(2+String.valueOf(index).length()));
         }
-        generateNonTouchingLoops(index+1, count, mask, gain, loops);
+        generateNonTouchingLoops(sb,index+1, count, mask, gain, loops);
     }
 
     void generatePathsAndLoops(int node, double gain,int mask, StringBuilder sb,
                                boolean[] visited, Pair<Integer, Double>[] par
     ){
-        if(node == myGraph.getNumberOfNodes()-1){
+        if(node == end){
             // forwardPath
             forwardPaths.add(new Path(sb.toString(), mask, gain));
             return;
@@ -121,22 +143,24 @@ public class Solver {
         visited[node] = true;
         for(Edge e : myGraph.getAdj(node)){
             sb.append(" V");
-            sb.append((char)('0' + e.getTo()));
+            int sz = e.getTo();
+            sb.append(sz);
             Pair<Integer, Double> temp = par[e.getTo()];
             par[e.getTo()] = new Pair<>(node, e.getWeight());
             generatePathsAndLoops(e.getTo(), gain*e.getWeight(), mask | (1 << e.getTo()), sb, visited, par);
             par[e.getTo()] = temp;
-            sb.setLength(sb.length()-3);
+            sb.setLength(sb.length()-(2+String.valueOf(sz).length()));
 
         }
         visited[node] = false;
     }
     double getDeterminant(int mask){
         double deter = 1;
-        for(Map.Entry<Integer,ArrayList<Pair<Integer, Double>>> entry : combinations.entrySet()){
+        for(Map.Entry<Integer,ArrayList<Combination<Integer, Double>>> entry : combinations.entrySet()){
             boolean odd = ((entry.getKey()&1) != 0);
             double sum = 0;
-            for(Pair<Integer, Double> pair: entry.getValue()){
+            for(Combination<Integer, Double> comb: entry.getValue()){
+                Pair<Integer, Double> pair = comb.getPair();
                 if((mask & pair.getFirst()) == 0){ // non intersecting
                     sum += pair.getSecond();
                 }
@@ -148,14 +172,14 @@ public class Solver {
 
     double solve(){
         int n = myGraph.getNumberOfNodes();
-        StringBuilder curPath = new StringBuilder(" V0");
-        boolean[] visited = new boolean[n];
+        StringBuilder curPath = new StringBuilder(" V" + start);
+        boolean[] visited = new boolean[n+1];
         Arrays.fill(visited, false);
-        Pair<Integer, Double>[] par = new Pair[n];
+        Pair<Integer, Double>[] par = new Pair[n+1];
 
-        generatePathsAndLoops(0, 1, 0, curPath, visited, par);
+        generatePathsAndLoops(start, 1, 0, curPath, visited, par);
         Object[] paths =  loops.values().toArray();
-        generateNonTouchingLoops(0, 0, 0, 1, paths);
+        generateNonTouchingLoops(new StringBuilder(), 0, 0, 0, 1, paths);
         double generalDeter = getDeterminant(0);
         double ans = 0;
         for(Path path: forwardPaths){
@@ -163,6 +187,9 @@ public class Solver {
         }
         ans /= generalDeter;
         return ans;
+    }
+    public Map<Integer, ArrayList<Combination<Integer, Double>>> getCombinations() {
+        return combinations;
     }
 
     ArrayList<Path> getForwardPaths(){

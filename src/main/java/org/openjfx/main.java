@@ -16,7 +16,7 @@ public class main extends Application {
         Parent root = loader.load();
         ((Controller)loader.getController()).setRoot((AnchorPane)root);
         primaryStage.setTitle("SFG Solver");
-        primaryStage.setScene(new Scene(root, 791, 561));
+        primaryStage.setScene(new Scene(root, 994, 561));
         primaryStage.getIcons().add(new Image(getClass().getClassLoader().getResourceAsStream("icon.png")));
         primaryStage.show();
     }
